@@ -1,2 +1,7 @@
-# Ravy_Project
-Desenvolvimento de um blog para a Ravy (Blog para seus poemas)
+
+
+
+# Ravy Project - Soul's Poem - (Titulo temporario)
+
+Esse projeto tem como objetivo ser um blog funcional para  a postagem
+de poemas feita para minha pessoas especial Ravy :cupid: 
