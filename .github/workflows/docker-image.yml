@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
 
@@ -23,7 +23,7 @@ jobs:
     steps:
         - uses: actions/checkout@v2
         - uses: akhileshns/heroku-deploy@v3.12.12
-            with:
-                heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-                heroku_app_name: "soulspoem"
-                heroku_email: "alexandre.arthur@estudantes.ifg.edu.br"
+          with:
+            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+            heroku_app_name: "soulspoem"
+            heroku_email: "alexandre.arthur@estudantes.ifg.edu.br"
