@@ -1,0 +1,33 @@
+.card-body {
+  border: 1px solid rgb(214, 0, 0);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+}
+
+body, html, footer, p, #footer {
+  background-color: #212529
+
+}
+
+
+#logo{
+  width: 100px;
+  height: 70px;
+  margin-left: -80px;
+  
+}
+#content-padding{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto  auto auto auto;
+    background-color: rgb(90, 33, 136);
+}
+
+.box-element{
+	box-shadow:hsl(0, 100%, 55%) 0 0 16px;
+	background-color: rgb(0, 0, 0);
+	border-radius: 4px;
+	padding: 10px;
+	
+}
