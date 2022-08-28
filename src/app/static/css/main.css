@@ -21,7 +21,7 @@ body, html, footer, p, #footer {
     padding-top: 50px;
     padding-bottom: 50px;
     margin: auto  auto auto auto;
-    background-color: rgb(90, 33, 136);
+    background-color: rgb(55, 3, 83);
 }
 
 .box-element{
@@ -30,4 +30,15 @@ body, html, footer, p, #footer {
 	border-radius: 4px;
 	padding: 10px;
 	
+}
+
+.thumbnail{
+	width: 100%;
+	height: 200px;
+    background-color: #fefcff;
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    box-shadow:hsl(0, 100%, 55%) 0 0 16px;
+    padding: 10px;
+    border-radius: 4px;
 }
