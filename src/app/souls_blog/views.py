@@ -7,6 +7,5 @@ def home(request):
 def blog(request):
     return render(request, "souls_blog/blog.html")
 
-
-def erro404(request):
-    return render(request, "souls_blog/erro404.html")
+def post(request, id):
+    return render(request, "souls_blog/post.html")

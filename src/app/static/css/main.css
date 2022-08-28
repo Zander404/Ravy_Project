@@ -11,6 +11,7 @@ body, html, footer, p, #footer {
 }
 
 
+
 #logo{
   width: 100px;
   height: 70px;
@@ -25,20 +26,23 @@ body, html, footer, p, #footer {
 }
 
 .box-element{
-	box-shadow:hsl(0, 100%, 55%) 0 0 16px;
+	box-shadow:hsl(289, 100%, 50%) 0 0 16px;
 	background-color: rgb(0, 0, 0);
 	border-radius: 4px;
+  margin: auto;
 	padding: 10px;
+  border: 2px solid rgb(214, 0, 0);
 	
 }
 
 .thumbnail{
 	width: 100%;
 	height: 200px;
-    background-color: #fefcff;
-	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-    box-shadow:hsl(0, 100%, 55%) 0 0 16px;
-    padding: 10px;
-    border-radius: 4px;
+  background-color: #fefcff;
+	-webkit-box-shadow: -1px -3px 5px -2px rgb(55, 3, 83);
+  -moz-box-shadow: -1px -3px 5px -2px rgb(55, 3, 83);
+  
+  padding: 10px;
+  border: 3px solid rgb(214, 0, 0);
+  border-radius: 4px;
 }
