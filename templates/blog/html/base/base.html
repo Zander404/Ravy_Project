@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"/>
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -10,12 +11,14 @@
     <title>TESTE</title>
 
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
 {% include 'blog/html/base/navbar.html' %}
 
+<div class="min-h-screen container bg-white mx-auto mx-12 my-12 text-black p-4 rounded-xl border border-2 ">
 {% block content %}
 
 {% endblock %}
+</div>
 
 
 {% include 'blog/html/base/footer.html' %}

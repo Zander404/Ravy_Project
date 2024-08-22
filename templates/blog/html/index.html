@@ -2,15 +2,33 @@
 {% load static %}
 
 {% block content %}
-    <div class="flex-grow p-4 h-screen">
-        <div>
-            <img width="64" src="{% static 'img/logo.png' %}">
-        </div>
-        <div>
-            <img width="64" src="{% static 'img/logo.png' %}">
-        </div>
-        <div>
-            <img width="64" src="{% static 'img/logo.png' %}">
+
+    <div class="flex-col text-center space-y-6">
+        <h1 class="bold text-xl">Poemas</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-12">
+
+        {% for poema in poemas %}
+            <div class="card bg-base-100 border">
+                <figure>
+                    <img
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes"/>
+                </figure>
+                <div class="card-body space-y-2">
+                    <h2 class="card-title text-start">{{ poema.title }}</h2>
+                    <p class="text-start indent-2 text-balanced">{{ poema.description }}</p>
+                    <div class="card-actions justify-between text-start">
+                        <h2 class="bold text-sm"> Escrito por: {{ poema.posted_by }}</h2>
+                        <button class="btn btn-primary">Ler mais</button>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
         </div>
     </div>
+
+
+    </div>
+
 {% endblock %}

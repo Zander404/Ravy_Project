@@ -1,4 +1,4 @@
-from models import User, Post, Role, Category, User_Role, Post_Category
+from models import User, Post, Role, Category
 from django import forms
 
 
@@ -31,17 +31,4 @@ class CategoryForm(forms.ModelForm):
         model = Category
         fields = '__all__'
 
-
-class User_Role(forms.ModelForm):
-
-    class Meta:
-        model = User_Role
-        fields = '__all__'
-
-
-class Post_Category(forms.ModelForm):
-
-    class Meta:
-        model = Post_Category
-        fields = '__all__'
 

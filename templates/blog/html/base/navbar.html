@@ -1,13 +1,31 @@
 {% load static %}
 
-
-<div class="navbar bg-dark_primary sticky relative top-0 z-50 ">
+<div class="flex justify-around navbar bg-dark_primary sticky relative top-0 z-50">
     <div class="flex-1">
         <a class="content-center btn hover:bg-dark_accent_secondary bg-dark_secondary ">
             <img class="" width="64" alt="logo" src="{% static 'img/logo.png' %}">
         </a>
     </div>
     <div class="flex-none">
-        asd
+
+        <ul class="px-8 menu menu-sm sm:menu-md menu-horizontal">
+            <li>
+                <details >
+                    <summary>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+
+
+                    </summary>
+                    <ul class="bg-base-300 rounded-t-none">
+                        <li><a>Home</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                        <li><a>About Me</a></li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
     </div>
 </div>
