@@ -1,22 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"/>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <meta charset="UTF-8">
     <title>TESTE</title>
 
 </head>
-<body>
-{% extends 'blog/html/base/navbar.html' %}
+<body class="min-h-screen flex flex-col">
+{% include 'blog/html/base/navbar.html' %}
 
 {% block content %}
 
 {% endblock %}
 
 
-{% extends 'blog/html/base/footer.html' %}
+{% include 'blog/html/base/footer.html' %}
 
+
+<script src="{% static 'js/taiwinds_conf.js' %}"></script>
 </body>
 </html>
