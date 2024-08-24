@@ -1,4 +1,4 @@
-{% extends 'blog/html/base/base.html' %}
+    {% extends 'blog/html/base/base.html' %}
 {% load static %}
 
 {% block content %}
@@ -20,7 +20,7 @@
                     <p class="text-start indent-2 text-balanced">{{ poema.description }}</p>
                     <div class="card-actions justify-between place-items-start text-start">
                         <h2 class="bold text-sm"> Escrito por: {{ poema.posted_by }}</h2>
-                        <button class="btn btn-primary">Ler mais</button>
+                        <a href="{% url 'poema' poema.id %}" class="btn btn-primary">Ler mais</a>
                     </div>
                 </div>
             </div>

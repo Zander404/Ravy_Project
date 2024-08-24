@@ -1,0 +1,15 @@
+{% extends "blog/html/base/base.html" %}
+{% load static %}
+
+{% block content %}
+    
+    
+    <div>
+        <div class="grid grid-rows-2">
+        <img src={{ poema.banner.banner_url }} />
+        <h1 class="text-center">{{ poema.title }}</h1>
+            
+        </div>
+    
+    </div>
+{% endblock %}
