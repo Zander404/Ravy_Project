@@ -1,4 +1,4 @@
-{% extends 'blog/html/base/base.html' %}
+{% extends 'blog/base/base.html' %}
 {% load static %}
 
 {% block content %}
@@ -13,16 +13,14 @@
                         {% if poema.banner_url %}
                             <figure>
                                 <img
-                                        width="240"
-                                        height="45"
+                                        width="120"
                                         src="{{ poema.banner_url }}"
                                         alt="poema_banner"/>
                             </figure>
                         {% else %}
                             <figure>
                                 <img
-                                        width="240"
-                                        height="45"
+                                        width="200"
                                         src="{% static 'img/logo.png' %}"
                                         alt="poema_banner"/>
                             </figure>

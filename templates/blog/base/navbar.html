@@ -2,7 +2,7 @@
 
 <div class="flex justify-around navbar bg-dark_primary sticky relative top-0 z-50">
     <div class="flex-1">
-        <a href="{% url 'home' %}" class="content-center btn hover:bg-dark_accent_secondary bg-dark_secondary ">
+        <a href="{% url 'home' %}" class="content-center btn bg-dark_secondary hover:bg-dark_accent_secondary ">
             <img class="" width="64" alt="logo" src="{% static 'img/logo.png' %}">
         </a>
     </div>
@@ -10,18 +10,23 @@
 
         <ul class="px-8 menu menu-sm sm:menu-md menu-horizontal">
             <li>
-                <details >
+                <details>
                     <summary>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
                         </svg>
-
-
                     </summary>
                     <ul class="bg-base-300 rounded-t-none">
                         <li><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="{% url 'contact' %}">Contact</a></li>
                         <li><a href="{% url 'about_me' %}">About Me</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'add_poetry' %}">Adicionar Poema</a></li>
+                        {% else %}
+                            <li><a href="">Logar</a></li>
+                        {% endif %}
                     </ul>
                 </details>
             </li>

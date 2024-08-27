@@ -1,0 +1,31 @@
+{% extends "blog/base/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    <div class="grid h-fit gap-6 sm:gap-32 m-auto">
+        <div class="grid grid-rows-1 justify-item-center content-center justify-center ">
+            {% if poema.banner_url %}
+                <img width="280" src={{ poema.banner_url }}/>
+            {% else %}
+                <img width="280" src={% static 'img/logo.png' %}/>
+            {% endif %}
+            <h1 class="text-xs sm:text-xl font-bold text-center">{{ poema.title }}</h1>
+        </div>
+    
+        <div class="p-4 border rounded-md content-center ">
+            {{ poema.content }}
+        </div>
+    
+        {% if user.is_authenticated %}
+            <div class="flex gap-4 justify-end">
+                <a href="{% url 'edit_poetry' poema.id %}" class="btn btn-warning w-20">Edit</a>
+                <a href="{% url 'delete_poetry' poema.id %}" class="btn btn-error w-20">Delete</a>
+            </div>
+        {% endif %}
+
+    </div>
+
+
+{% endblock %}

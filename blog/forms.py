@@ -1,4 +1,4 @@
-from models import User, Post, Role, Category
+from .models import User, Post, Role, Category
 from django import forms
 
 
