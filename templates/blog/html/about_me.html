@@ -1,5 +1,26 @@
 {% extends 'blog/html/base/base.html' %}
-
+{% load static %}
 {% block content %}
+    <div class="m-auto grid grid-cols-1 sm:grid-cols-2 gap-8 ">
+        <div class="avatar shadow shadow-xl">
+            <img class="rounded-xl border-2" width="600" src="{% static 'img/about_me.png' %}">
+        </div>
+
+        <div class="grid m-auto text-center gap-4">
+            <h2 class="font-bold text-xl"> Hi there, My name is <a class="text-dark_accent">Ravy!</a></h2>
+            <p> I do something, just for fun
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor iaculis gravida. Duis dapibus
+                enim id velit rhoncus consectetur. Suspendisse potenti. Cras interdum, felis id interdum fringilla,
+                velit nulla ullamcorper sapien, ac commodo leo velit vitae dolor. Cras enim urna, consequat laoreet
+                libero vitae, auctor faucibus erat. Nunc viverra enim sit amet condimentum vulputate. Phasellus
+                convallis porttitor justo eu porta. Vestibulum et erat pulvinar, tincidunt erat quis, mattis massa.
+                Morbi hendrerit aliquet ligula. Proin vulputate purus vitae congue pharetra. In egestas convallis sem,
+                sed congue augue egestas ac. Sed vitae nisl tellus. Donec euismod ut tortor a tempus. Aliquam vitae arcu
+                at lacus varius maximus sed sit amet odio. Mauris gravida elementum nunc hendrerit pretium. Fusce et ex
+                ex.
+            </p>
+        </div>
+    </div>
 
 {% endblock %}
