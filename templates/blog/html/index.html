@@ -1,4 +1,4 @@
-    {% extends 'blog/html/base/base.html' %}
+{% extends 'blog/html/base/base.html' %}
 {% load static %}
 
 {% block content %}
@@ -7,29 +7,41 @@
         <h1 class="bold text-xl">Poemas</h1>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
-        {% if poemas %}
-        {% for poema in poemas %}
-            <div class="card bg-base-100 dark:text-white border justify-center">
-                <figure>
-                    <img
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes"/>
-                </figure>
-                <div class="card-body space-y-2">
-                    <h2 class="card-title text-start">{{ poema.title }}</h2>
-                    <p class="text-start indent-2 text-balanced">{{ poema.description }}</p>
-                    <div class="card-actions justify-between place-items-start text-start">
-                        <h2 class="bold text-sm"> Escrito por: {{ poema.posted_by }}</h2>
-                        <a href="{% url 'poema' poema.id %}" class="btn btn-primary">Ler mais</a>
+            {% if poemas %}
+                {% for poema in poemas %}
+                    <div class="card bg-base-100 dark:text-white border justify-center">
+                        {% if poema.banner_url %}
+                            <figure>
+                                <img
+                                        width="240"
+                                        height="45"
+                                        src="{{ poema.banner_url }}"
+                                        alt="poema_banner"/>
+                            </figure>
+                        {% else %}
+                            <figure>
+                                <img
+                                        width="240"
+                                        height="45"
+                                        src="{% static 'img/logo.png' %}"
+                                        alt="poema_banner"/>
+                            </figure>
+                        {% endif %}
+                        <div class="card-body space-y-2">
+                            <h2 class="card-title text-start">{{ poema.title }}</h2>
+                            <p class="text-start indent-2 text-balanced">{{ poema.description }}</p>
+                            <div class="card-actions justify-between place-items-start text-start">
+                                <h2 class="bold text-sm"> Escrito por: {{ poema.posted_by }}</h2>
+                                <a href="{% url 'poema' poema.id %}" class="btn btn-primary">Ler mais</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        {% endfor %}
+                {% endfor %}
             {% else %}
-            <div class="">
-                <h1 class="bold text-xl"> Sem Poemas para ser Visualizados</h1>
-            </div>
-        {% endif %}
+                <div class="">
+                    <h1 class="bold text-xl"> Sem Poemas para ser Visualizados</h1>
+                </div>
+            {% endif %}
         </div>
     </div>
 

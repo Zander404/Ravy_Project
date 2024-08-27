@@ -2,7 +2,7 @@
 
 <div class="flex justify-around navbar bg-dark_primary sticky relative top-0 z-50">
     <div class="flex-1">
-        <a class="content-center btn hover:bg-dark_accent_secondary bg-dark_secondary ">
+        <a href="{% url 'home' %}" class="content-center btn hover:bg-dark_accent_secondary bg-dark_secondary ">
             <img class="" width="64" alt="logo" src="{% static 'img/logo.png' %}">
         </a>
     </div>
@@ -19,10 +19,9 @@
 
                     </summary>
                     <ul class="bg-base-300 rounded-t-none">
-                        <li><a>Home</a></li>
-                        <li><a>Blog</a></li>
-                        <li><a>Contact</a></li>
-                        <li><a>About Me</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="{% url 'about_me' %}">About Me</a></li>
                     </ul>
                 </details>
             </li>

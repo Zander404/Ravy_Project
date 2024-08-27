@@ -3,12 +3,11 @@ tailwind.config = {
         extend: {
             colors: {
                 dark_primary: '#8D00DE',
-                dark_secondary: '#8A6ECD',
-                dark_accent: '#425E2F',
+                dark_secondary: '#291CEB',
+                dark_accent: '#B01CEB',
+                dark_accent_sencodary: '#EB1CDA',
 
-
-
-                white_acent_secondary: '#6200EA'
+                white_acent_secondary: '#C66AEB'
             }
         }
     }

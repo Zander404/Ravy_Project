@@ -2,14 +2,22 @@
 {% load static %}
 
 {% block content %}
-    
-    
-    <div>
-        <div class="grid grid-rows-2">
-        <img src={{ poema.banner.banner_url }} />
-        <h1 class="text-center">{{ poema.title }}</h1>
-            
+
+
+    <div class="grid h-fit gap-6 sm:gap-32 m-auto">
+        <div class="grid grid-rows-1 justify-item-center content-center justify-center ">
+            {% if poema.banner_url %}
+            <img width="280" src={{ poema.banner_url }}/>
+            {% else %}
+                <img width="280" src={% static 'img/logo.png' %}/>
+            {% endif %}
+            <h1 class="text-xs sm:text-md text-center">{{ poema.title }}</h1>
         </div>
-    
+        <div class="p-4 border rounded-md content-center ">
+            {{ poema.content }}
+        </div>
+
     </div>
+
+
 {% endblock %}
