@@ -3,13 +3,13 @@
 
 
 {% block content %}
-    <form method="post" enctype="multipart/form-data">
+    <form class="grid grid-cols-1 gap-6 content-center place-items-center" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
 
         <div class="flex flex-col sm:flex-row sm:grid-cols-2 gap-6 justify-center items-center">
             <button type="submit" class="btn btn-success w-full sm:w-96">Salvar</button>
-            <a class="btn btn-error w-full sm:w-96">Voltar</a>
+            <a href="{% url 'home' %}" class="btn btn-error w-full sm:w-96">Voltar</a>
         </div>
     </form>
 

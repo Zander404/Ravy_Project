@@ -1,0 +1,17 @@
+{% extends 'blog//base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <h2>Sign Up</h2>
+
+    <form method="post" class="grid grid-cols-1 place-items-center gap-6 ">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-accent" type="submit">Register</button>
+    </form>
+
+    <p class="text-center mt-6">Already have an account? <a class="link " href="{% url 'login' %}">Log in here</a>.</p>
+
+{% endblock %}

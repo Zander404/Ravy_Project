@@ -3,7 +3,6 @@
 
 {% block content %}
 
-
     <div class="grid h-fit gap-6 sm:gap-32 m-auto">
         <div class="grid grid-rows-1 justify-item-center content-center justify-center ">
             {% if poema.banner_url %}
@@ -13,16 +12,34 @@
             {% endif %}
             <h1 class="text-xs sm:text-xl font-bold text-center">{{ poema.title }}</h1>
         </div>
-    
+
         <div class="p-4 border rounded-md content-center ">
             {{ poema.content }}
         </div>
-    
+
         {% if user.is_authenticated %}
             <div class="flex gap-4 justify-end">
                 <a href="{% url 'edit_poetry' poema.id %}" class="btn btn-warning w-20">Edit</a>
-                <a href="{% url 'delete_poetry' poema.id %}" class="btn btn-error w-20">Delete</a>
+
+                <button class="btn btn-error" onclick="my_modal_1.showModal()">Delete</button>
+                <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box">
+                        <h3 class="text-lg font-bold">Delete that Poetry!</h3>
+                        <p class="py-4">Press ESC key or click the button below to close</p>
+                        <div class="modal-action">
+                            <form method="post" action="{% url 'delete_poetry' poema.id %}">
+                                {% csrf_token %}
+                                <!-- if there is a button in form, it will close the modal -->
+                                <div class="modal-action">
+                                    <button type="submit" class="btn btn-error">Delete</button>
+                                    <a href="" class="btn btn-accent">Keep</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
             </div>
+
         {% endif %}
 
     </div>

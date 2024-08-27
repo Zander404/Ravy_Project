@@ -1,0 +1,24 @@
+{% extends 'blog//base/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <h2>Login</h2>
+
+    <form method="post" class="grid grid-cols-1 content-center place-items-center gap-6">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn w-96 w-max-xs" type="submit">Login</button>
+        <p>Don't have an account? .</p>
+        <a href="{% url 'signup' %}" class="btn">Sign up here</a>
+    </form>
+
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+
+    {% if next %}
+        <input type="hidden" name="next" value="{{ next }}">
+    {% endif %}
+
+{% endblock %}

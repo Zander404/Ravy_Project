@@ -129,6 +129,13 @@ STATICFILES_DIRS = [
 MEDIA_URL = 'uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads/')
 
+# URL para redirecionar após o login
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+# URL para redirecionar se o usuário não estiver autenticado
+LOGIN_URL = 'login'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
