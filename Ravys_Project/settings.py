@@ -28,7 +28,13 @@ SECRET_KEY = 'django-insecure-2^f*9fjfex&3_+*s1zl5%y6jaqmeo-mgm#9k(^lidx@#_8%kol
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
+SITE_ID = 1
 
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_VERIFICATION = None
 
 # Application definition
 
@@ -39,8 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "blog.apps.BlogConfig"
+    "blog",
 ]
+
+AUTH_USER_MODEL = 'blog.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -134,6 +142,7 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 # URL para redirecionar se o usuário não estiver autenticado
 LOGIN_URL = 'login'
+
 
 
 # Default primary key field type
